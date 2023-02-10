@@ -2,10 +2,12 @@ import { Link } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="container mt-5">
-      <h1>About</h1>
-      <Link to="/">retornar a página inicial</Link>
-    </div>
+    <>
+      <h2>About</h2>
+      <Link to="/" className="btn btn-primary">
+        retornar a página inicial
+      </Link>
+    </>
   )
 }
 
