@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const tahoe_peaks = [
   { name: 'Freel', elevation: '10891' },
   { name: 'Monument', elevation: '10067' },
@@ -19,8 +21,8 @@ function List({ data, renderItem, renderEmpty }) {
 
 function App() {
   return (
-    <div className="container mt-5">
-      <h1>React Essential Training</h1>
+    <>
+      <h2>Peaks</h2>
       <List
         data={tahoe_peaks}
         renderEmpty={<p>This list is empty</p>}
@@ -30,7 +32,10 @@ function App() {
           </>
         )}
       />
-    </div>
+      <Link to="/" className="btn btn-primary">
+        retornar a página inicial
+      </Link>
+    </>
   )
 }
 
