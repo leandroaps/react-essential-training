@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import 'bootstrap/dist/css/bootstrap.css';
+
+const tahoe_peaks = [
+  { name: 'Freel', elevation: '10891' },
+  { name: 'Monument', elevation: '10067' },
+  { name: 'Pyramid', elevation: '9983' },
+  { name: 'Tallac', elevation: '9735' }
+]
+
+function List({ data, renderItem, renderEmpty }) {
+  return !data.length ? (
+    renderEmpty
+  ) : (
+    <ul>
+      {data.map((item) => (
+        <li key={item.name}>{renderItem(item)}</li>
+      ))}
+    </ul>
+  )
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container mt-5">
+      <h1>React Essential Training</h1>
+      <List
+        data={tahoe_peaks}
+        renderEmpty={<p>This list is empty</p>}
+        renderItem={(item) => (
+          <>
+            {item.name} - {item.elevation} ft.
+          </>
+        )}
+      />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
