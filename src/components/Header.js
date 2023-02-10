@@ -34,6 +34,11 @@ function App() {
                 Peaks
               </Link>
             </li>
+            <li className="nav-item">
+              <Link to="/reducer" className="nav-link">
+                Reducer
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
