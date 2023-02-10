@@ -1,39 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.css';
 
-const tahoe_peaks = [
-  { name: 'Freel', elevation: '10891' },
-  { name: 'Monument', elevation: '10067' },
-  { name: 'Pyramid', elevation: '9983' },
-  { name: 'Tallac', elevation: '9735' }
-]
+import Nav from './router';
 
-function List({ data, renderItem, renderEmpty }) {
-  return !data.length ? (
-    renderEmpty
-  ) : (
-    <ul>
-      {data.map((item) => (
-        <li key={item.name}>{renderItem(item)}</li>
-      ))}
-    </ul>
-  )
+export default function App() {
+  return <Nav />
 }
-
-function App() {
-  return (
-    <div className="container mt-5">
-      <h1>React Essential Training</h1>
-      <List
-        data={tahoe_peaks}
-        renderEmpty={<p>This list is empty</p>}
-        renderItem={(item) => (
-          <>
-            {item.name} - {item.elevation} ft.
-          </>
-        )}
-      />
-    </div>
-  )
-}
-
-export default App
