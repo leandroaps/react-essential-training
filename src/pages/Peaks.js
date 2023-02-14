@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import HomeButton from '../components/HomeButton';
 
 const tahoe_peaks = [
   { name: 'Freel', elevation: '10891' },
@@ -19,7 +19,7 @@ function List({ data, renderItem, renderEmpty }) {
   )
 }
 
-function App() {
+function Peaks() {
   return (
     <>
       <h2>Peaks</h2>
@@ -32,11 +32,9 @@ function App() {
           </>
         )}
       />
-      <Link to="/" className="btn btn-primary">
-        retornar a página inicial
-      </Link>
+      <HomeButton />
     </>
   )
 }
 
-export default App
+export default Peaks

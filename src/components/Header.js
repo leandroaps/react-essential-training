@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-function App() {
+function Header() {
   return (
     <nav
       className="navbar navbar-expand-lg navbar-dark bg-dark"
@@ -39,6 +39,11 @@ function App() {
                 Reducer
               </Link>
             </li>
+            <li className="nav-item">
+              <Link to="/destructuring" className="nav-link">
+                Destructuring
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
@@ -46,4 +51,4 @@ function App() {
   )
 }
 
-export default App
+export default Header
