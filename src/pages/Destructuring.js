@@ -1,12 +1,12 @@
 import HomeButton from '../components/HomeButton';
 
-function About() {
+function Destructuring({ library }) {
   return (
     <>
-      <h2>About</h2>
+      <h2>Destructuring {library}</h2>
       <HomeButton />
     </>
   )
 }
 
-export default About
+export default Destructuring

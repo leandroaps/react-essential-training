@@ -1,3 +1,9 @@
 #root {
   min-height: 100%;
 }
+
+.btn {
+  position: absolute;
+  right: 1vw;
+  bottom: 1vh;
+}

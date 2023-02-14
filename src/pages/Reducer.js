@@ -1,5 +1,7 @@
 import { useReducer } from 'react';
 
+import HomeButton from '../components/HomeButton';
+
 const initialState = 0
 const reducer = (state, action) => {
   switch (action) {
@@ -14,7 +16,7 @@ const reducer = (state, action) => {
   }
 }
 
-function Usereducer() {
+function Reducer() {
   const [count, dispatch] = useReducer(reducer, initialState)
 
   return (
@@ -41,8 +43,9 @@ function Usereducer() {
           Reset
         </button>
       </div>
+      <HomeButton />
     </>
   )
 }
 
-export default Usereducer
+export default Reducer
